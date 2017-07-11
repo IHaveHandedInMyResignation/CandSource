@@ -38,10 +38,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		filter.setForceEncoding(true);
 		http.addFilterBefore(filter, CsrfFilter.class);
 		
-		http.authorizeRequests().antMatchers("/", "/home").permitAll().antMatchers("/profile", "/profile/")
-				.hasAnyRole("USER", "ADMIN").antMatchers("/taskmgr", "/taskmgr/").hasAnyRole("USER", "ADMIN")
-				.antMatchers("/forum", "/forum/").hasAnyRole("USER", "ADMIN").antMatchers("/expenses", "/expenses/")
-				.hasAnyRole("USER", "ADMIN").and().formLogin().loginProcessingUrl("/j_spring_security_check")
+		http.authorizeRequests().antMatchers("/", "/home").permitAll()
+				.antMatchers("/profile", "/profile/**").hasAnyRole("USER", "ADMIN")
+				.antMatchers("/taskmgr", "/taskmgr/**").hasAnyRole("USER", "ADMIN")
+				.antMatchers("/forum", "/forum/**").hasAnyRole("USER", "ADMIN")
+				.antMatchers("/expenses", "/expenses/**").hasAnyRole("USER", "ADMIN")
+				.antMatchers("/account", "/account/**").hasAnyRole("USER", "ADMIN")
+				.and().formLogin().loginProcessingUrl("/j_spring_security_check")
 				.loginPage("/login").failureUrl("/login?error=loginFailure").usernameParameter("username")
 				.passwordParameter("password").and().logout().logoutSuccessUrl("/home").and().exceptionHandling()
 				.accessDeniedPage("/nopermission");
