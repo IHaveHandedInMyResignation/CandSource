@@ -1,0 +1,76 @@
+body {
+  font-family: "Open Sans", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5em;
+  font-weight: 400;
+}
+
+p, span, a, ul, li, button {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+strong {
+  font-weight: 600;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5em;
+  font-weight: 300;
+}
+
+strong {
+  font-weight: 400;
+}
+
+.tile {
+  width: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+  background: #fff;
+  padding: 35px;
+  background: #e1e1d0;
+  min-height: 200px;
+  min-width: 200px;
+}
+
+.tile.month {
+	background: #c2d6d6;
+}
+
+.tile.year {
+	background: #e6b3c9;
+}
+
+.tile.archive {
+	background: #b3cce6;
+}
+
+.tile.month:hover {
+	background: #85adad;
+}
+
+.tile.year:hover {
+	background: #d98cb1;
+}
+
+.tile.archive:hover {
+	background: #79a4d2;
+}
+.tile:hover {
+  background: #cdcdb1;
+  color: #fff;
+}
+.row.custom-pad {
+  margin-right:0;
+  margin-left:0;
+}
+.row.custom-pad > [class*='col-'] {
+  padding-right:1px;
+  padding-bottom:1px;
+  padding-left:0;
+}
