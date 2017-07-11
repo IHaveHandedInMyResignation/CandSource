@@ -58,7 +58,7 @@
       </ul>
 	     <ul class="nav navbar-nav navbar-right">
 	      <li><a href="${pageContext.request.contextPath}/account/new"><span class="glyphicon glyphicon-user"></span> New Account</a></li>
-	      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+	      <li><a href="${pageContext.request.contextPath}/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 	     </ul>
     </div>
   </div>
